@@ -5,7 +5,8 @@ const products = [
         id:'1',
         name:"Pencil",
         price:1,
-        description:"Perfect for the students"
+        description:"Perfect for the students",
+        completed:true
     },
     {
         id:'2',
