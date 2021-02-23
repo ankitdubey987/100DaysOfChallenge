@@ -28,6 +28,53 @@ class App extends React.Component{
     return (
       <div>
         <h1>Code goes here {this.state.answer}</h1>
+        <Age />
+        <Login />
+      </div>
+    )
+  }
+}
+
+class Age extends React.Component{
+  constructor(){
+    super()
+    this.state={
+      name:"Ankit",
+      age:23
+    }
+  }
+
+  render(){
+    return(
+      <div>
+        <p>name is {this.state.name}</p>
+        <p>age is {this.state.age}</p>
+      </div>
+    )
+  }
+}
+
+class Login extends React.Component{
+  constructor(){
+    super()
+    this.state={
+      isLoggedIn:true
+    }
+  }
+
+  CheckLogin(){
+    if (this.state.isLoggedIn===true){
+      return "in"
+    }else{
+      return "out"
+    }
+  }
+
+  render(){
+    return (
+
+      <div>
+        <h1>You are currently logged ({this.CheckLogin()})</h1>
       </div>
     )
   }
