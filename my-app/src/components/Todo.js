@@ -3,11 +3,7 @@ import { React } from "react";
 export default function Todo(params) {
     return(
         <div className='todo-items'>
-            <input 
-                type='checkbox' 
-                onChange={()=>{console.warn('checkbox clicked!')}} 
-                checked={params.item.completed}
-            />
+            <input type='checkbox' onChange={(event)=>params.handleChange(params.item.id)}/>
             <p onMouseOver={handleMouseOver}>{params.item.name}</p>
             <button onClick={handleClick}>
                 Click Me!
