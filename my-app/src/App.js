@@ -2,6 +2,7 @@ import {React,Component} from "react"
 import './App.css';
 import Todo from './components/Todo'
 import  products  from "./productsData";
+import  MyCount  from "./components/MyCount";
 
 
 class App extends Component{
@@ -20,6 +21,7 @@ class App extends Component{
     return (
       <div>
         <h1>Code goes here {this.state.answer}</h1>
+        <MyCount />
         <Age />
         <Login />
         <MyApp todos={allTodos}/>
