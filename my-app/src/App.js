@@ -1,21 +1,10 @@
-import React from "react"
+import {React,Component} from "react"
 import './App.css';
+import Todo from './components/Todo'
+import  products  from "./productsData";
 
-// function App() {
-//   const todoList = products.map((item)=>{
-//     return <TodoItem key={item.id} item={item} />
-//   })
-//   const mycomp = products.map((item)=>{
-//     return <Product key={item.id} name={item.name} price={item.price} description={item.description} />
-//   });
-//   return (
-//    <div>
-//      {todoList}
-//    </div>
-//   );
-// }
 
-class App extends React.Component{
+class App extends Component{
 
   constructor(){
     super()
@@ -25,17 +14,21 @@ class App extends React.Component{
   }
 
   render() {
+    let allTodos = products.map((item)=>{
+      return <Todo key={item.id} item={item}/>
+    })
     return (
       <div>
         <h1>Code goes here {this.state.answer}</h1>
         <Age />
         <Login />
+        <MyApp todos={allTodos}/>
       </div>
     )
   }
 }
 
-class Age extends React.Component{
+class Age extends Component{
   constructor(){
     super()
     this.state={
@@ -54,7 +47,7 @@ class Age extends React.Component{
   }
 }
 
-class Login extends React.Component{
+class Login extends Component{
   constructor(){
     super()
     this.state={
@@ -80,4 +73,20 @@ class Login extends React.Component{
   }
 }
 
+class MyApp extends Component{
+  constructor(props){
+    super(props)
+    this.state={
+      todoItems:[this.props.todos]
+    }
+  }
+
+  render(){
+    return(
+      <div className='MyApp'>
+        {this.state.todoItems}
+      </div>
+    )
+  }
+}
 export default App;
