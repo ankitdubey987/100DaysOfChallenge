@@ -4,6 +4,7 @@ import Todo from './components/Todo'
 import  products  from "./productsData";
 import  MyCount  from "./components/MyCount"
 import ConditionalRender from './components/ConditionalRender'
+import Logger from './components/Logger.js'
 
 class App extends Component{
   constructor() {
@@ -45,6 +46,7 @@ class App extends Component{
     })
     return(
       <div className='App'>
+        <Logger />
         <MyCount />
         {this.state.isLoading?
         <p>Loading ...</p>:
