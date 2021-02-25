@@ -6,7 +6,7 @@ export default class Logger extends Component{
     constructor() {
         super()
         this.state = {
-            logStatus:true
+            logStatus:false
         }
         this.handleClick = this.handleClick.bind(this)
     }
@@ -25,14 +25,14 @@ export default class Logger extends Component{
             <div className='logger'>
                 <p>User is 
                     { 
-                        this.state.logStatus ? <p>Logged In!</p>: <p>Logged out!</p>
+                        this.state.logStatus ? "Logged In!": "Logged out!"
                     }
                 </p>
                 <br/>
                 <br/>
                 <button onClick={this.handleClick} style={{color:this.state.logStatus ? "red" : "green" }}>
                     Click to { 
-                        this.state.logStatus ? <p>Logout!</p>: <p>LogIn!</p>
+                        this.state.logStatus ? "LogOut!": "LogIn!"
                     }
                 </button>
             </div>

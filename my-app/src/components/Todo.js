@@ -4,7 +4,10 @@ export default function Todo(params) {
     return(
         <div className='todo-items'>
             <input type='checkbox' onChange={(event)=>params.handleChange(params.item.id)}/>
-            <p onMouseOver={handleMouseOver}>{params.item.name}</p>
+            <p 
+                onMouseOver={handleMouseOver}
+                style={{color:params.item.completed?"green":"red",fontSize:params.item.completed?"10px":"25px"}}
+            >{params.item.name}</p>
             <button onClick={handleClick}>
                 Click Me!
             </button>
