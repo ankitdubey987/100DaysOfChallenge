@@ -6,6 +6,7 @@ import  MyCount  from "./components/MyCount"
 import ConditionalRender from './components/ConditionalRender'
 import Logger from './components/Logger.js'
 import  Fetcher  from "./components/Fetcher";
+import MyForm from './components/MyForm'
 
 class App extends Component{
   constructor() {
@@ -47,6 +48,7 @@ class App extends Component{
     })
     return(
       <div className='App'>
+        <MyForm />
         <Fetcher />
         <Logger />
         <MyCount />
