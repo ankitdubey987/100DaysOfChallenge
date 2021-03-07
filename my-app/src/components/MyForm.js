@@ -25,10 +25,14 @@ export default class MyForm extends Component{
         })
     }
 
+    handleSubmit(){
+
+    }
+
     render(){
         return(
             <div className='myform'>
-                <form >
+                <form onSubmit={this.handleSubmit}>
                     <input type="text" value={this.state.firstname} name="firstname" placeholder="First name" onChange={this.handleOnChange}/>
                     <input type="text" value={this.state.lastname} name="lastname" placeholder="last name" onChange={this.handleOnChange}/>
                     <label>
@@ -60,6 +64,7 @@ export default class MyForm extends Component{
                     <h1>{this.state.firstname}</h1>
                     <h2>{this.state.lastname}</h2>
                     <h3>You're {this.state.gender}</h3>
+                    <button>Submit</button>
                 </form>
             </div>
         )
