@@ -18,3 +18,9 @@ random_tensor = torch.rand(
 )
 
 print(random_tensor)
+
+'''to reshape a tensor'''
+random_tensor.view(
+    [2,4]
+)
+print(random_tensor)
