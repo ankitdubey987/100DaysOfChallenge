@@ -10,3 +10,11 @@ my_tensor = torch.tensor(
 
 print(my_tensor)
 print(my_tensor.size())
+
+"""working with random tensors"""
+
+random_tensor = torch.rand(
+    [4,2]
+)
+
+print(random_tensor)
